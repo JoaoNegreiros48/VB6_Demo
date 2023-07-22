@@ -1,0 +1,5 @@
+[History]
+1=#P0#=mb	#P1#=Form_Unload	#P2#=VB6_Demo/Inicial/Form_Unload	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20230722181521	#P7#=0	#P8#=0	.
+2=#P0#=mb	#P1#=Form_Load	#P2#=VB6_Demo/Demo/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20230722181200	#P7#=0	#P8#=4	.
+3=#P0#=mb	#P1#=cmdIniciarDemo_Click	#P2#=VB6_Demo/Inicial/cmdIniciarDemo_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20230722181305	#P7#=0	#P8#=3	.
+4=#P0#=mb	#P1#=Form_Load	#P2#=VB6_Demo/Inicial/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20230722181055	#P7#=0	#P8#=1	.
