@@ -23,6 +23,14 @@ Begin VB.Form Demo
    ScaleWidth      =   16695
    ShowInTaskbar   =   0   'False
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton cmdImprimir 
+      Caption         =   "Imprimir"
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   1
+      Top             =   120
+      Width           =   1815
+   End
    Begin MSDataGridLib.DataGrid DataGrid1 
       Height          =   8535
       Left            =   0
@@ -161,3 +169,61 @@ Private Sub Form_Load()
     Set DataGrid1.DataSource = rs ' Adiciona os dados no datagrid
 End Sub
 
+Private Sub cmdImprimir_Click()
+    Call imprime_dados
+End Sub
+
+Private Sub imprime_dados()
+    Dim rs As New ADODB.Recordset
+
+    If DBConnection.State = 0 Then DBConnection.Open ' se a conexão não estiver aberta, abre
+    
+    rs.CursorLocation = adUseClient
+    rs.Open "SELECT * FROM Tabela1", DBConnection, adOpenStatic, adLockBatchOptimistic, adCmdText
+
+    Set rs.ActiveConnection = Nothing ' Manter os dados do Rs mesmo quando a conexão é fechada
+    
+    Dim tamanhofolha As Integer
+    Dim i            As Integer
+    'define a fonte e o tamanhao da fonte
+    
+    'Printer.DeviceName = Printer.PDF
+    Printer.FontName = "Arial"
+    Printer.FontSize = "10"
+    tamanhofolha = Printer.ScaleHeight - 1440 'define o tamanho da folha
+    rs.MoveFirst 'movimenta o ponteiro para o primeiro registro
+
+    contapagina = 0 'inicia o variável
+    
+    'Linhas para fazer cabeçalho
+    Printer.Print Tab(100); "";
+    Printer.Print Tab(10); "Nome";
+    Printer.Print Tab(40); "Email";
+    Printer.Print Tab(85); "Telefone";
+    Printer.Print Tab(115); "Idade";
+    Printer.Print Tab(100); "";
+
+    Do While Not rs.EOF '
+  
+        If Printer.CurrentY >= tamanhofolha Then 'verifica se se folha já 'encheu'
+            Printer.NewPage
+            
+        End If
+  
+        '---------------imprime os dados da tabela----------------------------
+        Printer.Print Tab(10); rs("Nome");
+        Printer.Print Tab(40); rs("Email");
+        Printer.Print Tab(85); rs("Telefone");
+        Printer.Print Tab(115); rs("Idade");
+  
+        '--------------------------------------------
+  
+        rs.MoveNext 'vai para o proximo registro
+
+    Loop
+
+    Printer.EndDoc 'envia os dados para a impressora
+
+    MsgBox "Os dados foram enviados para a impressora ... ! "
+
+End Sub
