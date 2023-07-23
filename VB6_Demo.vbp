@@ -12,6 +12,7 @@ Module=conecta; conecta.bas
 IconForm="Inicial"
 Startup="Sub Main"
 HelpFile=""
+ExeName32="VB6_Demo.exe"
 Command32=""
 Name="VB6_Demo"
 HelpContextID="0"
