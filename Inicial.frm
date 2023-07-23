@@ -27,6 +27,24 @@ Begin VB.Form Inicial
       TabIndex        =   0
       Top             =   0
       Width           =   28695
+      Begin VB.CommandButton cmdFecharDemo 
+         BackColor       =   &H00E0E0E0&
+         Caption         =   "Fechar demo"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   600
+         Left            =   4320
+         TabIndex        =   3
+         Top             =   1560
+         Width           =   1815
+      End
       Begin VB.CommandButton cmdIniciarDemo 
          BackColor       =   &H00E0E0E0&
          Caption         =   "Iniciar demo"
@@ -72,6 +90,10 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
+Private Sub cmdFecharDemo_Click()
+    Unload Me
+End Sub
+
 Private Sub cmdIniciarDemo_Click()
     lblTituloInicial.Visible = False
     cmdIniciarDemo.Visible = False
@@ -84,8 +106,10 @@ Private Sub Form_Load()
     Frame1.Width = Me.Width
     lblTituloInicial.Left = (Screen.Width - lblTituloInicial.Width) \ 2
     lblTituloInicial.Top = (Screen.Height - lblTituloInicial.Height) \ 2
-    cmdIniciarDemo.Left = (Screen.Width - cmdIniciarDemo.Width) \ 2
+    cmdIniciarDemo.Left = ((Screen.Width - cmdIniciarDemo.Width) \ 2) - 1000
     cmdIniciarDemo.Top = ((Screen.Height - lblTituloInicial.Height) \ 2) + 500
+    cmdFecharDemo.Top = cmdIniciarDemo.Top
+    cmdFecharDemo.Left = cmdIniciarDemo.Left + 1920
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)

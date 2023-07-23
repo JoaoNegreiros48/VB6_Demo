@@ -22,6 +22,14 @@ Begin VB.Form Demo
    ScaleHeight     =   12510
    ScaleWidth      =   22380
    ShowInTaskbar   =   0   'False
+   Begin VB.CommandButton cmdFechar 
+      Caption         =   "Fechar"
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   14
+      Top             =   1560
+      Width           =   1815
+   End
    Begin VB.Frame frameAdicionar 
       Caption         =   "Adicionar"
       BeginProperty Font 
@@ -34,9 +42,9 @@ Begin VB.Form Demo
          Strikethrough   =   0   'False
       EndProperty
       Height          =   8535
-      Left            =   1800
+      Left            =   1440
       TabIndex        =   3
-      Top             =   2040
+      Top             =   4680
       Visible         =   0   'False
       Width           =   16695
       Begin VB.CommandButton cmdFecharFrameAdicionar 
@@ -371,6 +379,11 @@ Private Sub cmdAdicionarCliente_Click()
     MsgBox "Cliente cadastrado com sucesso"
     cmdFecharFrameAdicionar_Click
     atualizarDataGrid
+End Sub
+
+Private Sub cmdFechar_Click()
+    Unload Me
+    Unload Inicial
 End Sub
 
 Private Sub cmdFecharFrameAdicionar_Click()
