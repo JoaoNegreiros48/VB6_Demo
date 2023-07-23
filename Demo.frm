@@ -3,10 +3,10 @@ Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Begin VB.Form Demo 
    BorderStyle     =   0  'None
    Caption         =   "Demo"
-   ClientHeight    =   8535
-   ClientLeft      =   0
-   ClientTop       =   0
-   ClientWidth     =   16695
+   ClientHeight    =   12510
+   ClientLeft      =   975
+   ClientTop       =   1755
+   ClientWidth     =   22380
    BeginProperty Font 
       Name            =   "Tahoma"
       Size            =   8.25
@@ -19,10 +19,209 @@ Begin VB.Form Demo
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   8535
-   ScaleWidth      =   16695
+   ScaleHeight     =   12510
+   ScaleWidth      =   22380
    ShowInTaskbar   =   0   'False
-   StartUpPosition =   3  'Windows Default
+   Begin VB.Frame frameAdicionar 
+      Caption         =   "Adicionar"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   8535
+      Left            =   1800
+      TabIndex        =   3
+      Top             =   2040
+      Visible         =   0   'False
+      Width           =   16695
+      Begin VB.CommandButton cmdFecharFrameAdicionar 
+         Caption         =   "Fechar"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   600
+         Left            =   9120
+         TabIndex        =   13
+         Top             =   4920
+         Width           =   1815
+      End
+      Begin VB.CommandButton cmdAdicionarCliente 
+         Caption         =   "Adicionar"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   600
+         Left            =   6960
+         TabIndex        =   12
+         Top             =   4920
+         Width           =   1815
+      End
+      Begin VB.TextBox txtTelefone 
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   405
+         Left            =   10440
+         TabIndex        =   11
+         Top             =   3720
+         Width           =   3015
+      End
+      Begin VB.TextBox txtEmail 
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   405
+         Left            =   10440
+         TabIndex        =   10
+         Top             =   2040
+         Width           =   3015
+      End
+      Begin VB.TextBox txtIdade 
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   405
+         Left            =   4680
+         TabIndex        =   9
+         Top             =   3720
+         Width           =   3015
+      End
+      Begin VB.TextBox txtNome 
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   405
+         Left            =   4680
+         TabIndex        =   8
+         Top             =   2040
+         Width           =   3015
+      End
+      Begin VB.Label lblIdade 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Idade"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   4680
+         TabIndex        =   7
+         Top             =   3360
+         Width           =   1650
+      End
+      Begin VB.Label lblTelefone 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Telefone"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   10440
+         TabIndex        =   6
+         Top             =   3360
+         Width           =   1650
+      End
+      Begin VB.Label lblEmail 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Email"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   10440
+         TabIndex        =   5
+         Top             =   1680
+         Width           =   1650
+      End
+      Begin VB.Label lblNomeCompleto 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Nome completo"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   4680
+         TabIndex        =   4
+         Top             =   1680
+         Width           =   1650
+      End
+   End
+   Begin VB.CommandButton cmdAdicionar 
+      Caption         =   "Adicionar"
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   2
+      Top             =   840
+      Width           =   1815
+   End
    Begin VB.CommandButton cmdImprimir 
       Caption         =   "Imprimir"
       Height          =   600
@@ -154,33 +353,57 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Private Sub Form_Load()
-    Dim rs As New ADODB.Recordset
+Dim rs As New ADODB.Recordset
+Dim rs_cadastrar As New ADODB.Recordset
 
+Private Sub cmdAdicionarCliente_Click()
+    If DBConnection.State = 0 Then DBConnection.Open ' se a conexão não estiver aberta, abre
+    Set rs = New ADODB.Recordset
+    rs.Open "Tabela1", DBConnection, adOpenDynamic, adLockOptimistic
+    rs.AddNew
+    rs("Nome").Value = txtNome
+    rs("Email").Value = txtEmail
+    rs("Telefone").Value = txtTelefone
+    rs("Idade").Value = txtIdade
+    rs.Update
+    rs.Close
+    
+    MsgBox "Cliente cadastrado com sucesso"
+    cmdFecharFrameAdicionar_Click
+    atualizarDataGrid
+End Sub
+
+Private Sub cmdFecharFrameAdicionar_Click()
+    frameAdicionar.Visible = False
+End Sub
+
+Private Sub Form_Load()
+    Me.Width = 16695
+    Me.Height = 8535
+    
     Me.Left = (Screen.Width - Me.Width) \ 2
     Me.Top = (Screen.Height - Me.Height) \ 2
-
-    If DBConnection.State = 0 Then DBConnection.Open ' se a conexão não estiver aberta, abre
     
-    rs.CursorLocation = adUseClient
-    rs.Open "SELECT * FROM Tabela1", DBConnection, adOpenStatic, adLockBatchOptimistic, adCmdText
-
-    Set rs.ActiveConnection = Nothing ' Manter os dados do Rs mesmo quando a conexão é fechada
-    Set DataGrid1.DataSource = rs ' Adiciona os dados no datagrid
+    Set rs = New ADODB.Recordset
+    atualizarDataGrid
 End Sub
 
 Private Sub cmdImprimir_Click()
     Call imprime_dados
 End Sub
 
-Private Sub imprime_dados()
-    Dim rs As New ADODB.Recordset
+Private Sub cmdAdicionar_Click()
+    frameAdicionar.Visible = True
+    frameAdicionar.Left = 0
+    frameAdicionar.Top = 0
+End Sub
 
+Private Sub imprime_dados()
     If DBConnection.State = 0 Then DBConnection.Open ' se a conexão não estiver aberta, abre
     
     rs.CursorLocation = adUseClient
-    rs.Open "SELECT * FROM Tabela1", DBConnection, adOpenStatic, adLockBatchOptimistic, adCmdText
-
+    If rs.State = 0 Then rs.Open "SELECT * FROM Tabela1", DBConnection, adOpenStatic, adLockBatchOptimistic, adCmdText
+    
     Set rs.ActiveConnection = Nothing ' Manter os dados do Rs mesmo quando a conexão é fechada
     
     Dim tamanhofolha As Integer
@@ -227,3 +450,15 @@ Private Sub imprime_dados()
     MsgBox "Os dados foram enviados para a impressora ... ! "
 
 End Sub
+
+Function atualizarDataGrid()
+    If DBConnection.State = 0 Then DBConnection.Open ' se a conexão não estiver aberta, abre
+    
+    rs.CursorLocation = adUseClient
+    rs.Open "SELECT * FROM Tabela1", DBConnection, adOpenStatic, adLockBatchOptimistic, adCmdText
+
+    Set rs.ActiveConnection = Nothing ' Manter os dados do Rs mesmo quando a conexão é fechada
+    Set DataGrid1.DataSource = rs ' Adiciona os dados no datagrid
+    
+    DBConnection.Close
+End Function

@@ -1,5 +1,9 @@
 [History]
-1=#P0#=mb	#P1#=imprime_dados	#P2#=VB6_Demo/Demo/imprime_dados	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723144221	#P7#=0	#P8#=9	.
-2=#P0#=mb	#P1#=cmdImprimir_Click	#P2#=VB6_Demo/Demo/cmdImprimir_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723144210	#P7#=0	#P8#=4	.
-3=#P0#=mb	#P1#=ConnectLocalDatabase	#P2#=VB6_Demo/conecta/ConnectLocalDatabase	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723142809	#P7#=0	#P8#=0	.
-4=#P0#=mb	#P1#=Form_Load	#P2#=VB6_Demo/Demo/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20230723144154	#P7#=0	#P8#=15	.
+1=#P0#=mb	#P1#=atualizarDataGrid	#P2#=VB6_Demo/Demo/atualizarDataGrid	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723152535	#P7#=0	#P8#=3	.
+2=#P0#=mb	#P1#=cmdAdicionarCliente_Click	#P2#=VB6_Demo/Demo/cmdAdicionarCliente_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723152832	#P7#=0	#P8#=12	.
+3=#P0#=mb	#P1#=cmdFecharFrameAdicionar_Click	#P2#=VB6_Demo/Demo/cmdFecharFrameAdicionar_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723150256	#P7#=0	#P8#=0	.
+4=#P0#=mb	#P1#=cmdAdicionar_Click	#P2#=VB6_Demo/Demo/cmdAdicionar_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723145317	#P7#=0	#P8#=1	.
+5=#P0#=mb	#P1#=imprime_dados	#P2#=VB6_Demo/Demo/imprime_dados	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723152611	#P7#=0	#P8#=-1	.
+6=#P0#=mb	#P1#=cmdImprimir_Click	#P2#=VB6_Demo/Demo/cmdImprimir_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723144210	#P7#=0	#P8#=2	.
+7=#P0#=mb	#P1#=Form_Load	#P2#=VB6_Demo/Demo/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20230723152531	#P7#=0	#P8#=1	.
+8=#P0#=mb	#P1#=ConnectLocalDatabase	#P2#=VB6_Demo/conecta/ConnectLocalDatabase	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230723142809	#P7#=0	#P8#=0	.

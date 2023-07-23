@@ -43,7 +43,7 @@ Begin VB.Form Inicial
          Left            =   2400
          TabIndex        =   2
          Top             =   1560
-         Width           =   1350
+         Width           =   1815
       End
       Begin VB.Label lblTituloInicial 
          AutoSize        =   -1  'True
