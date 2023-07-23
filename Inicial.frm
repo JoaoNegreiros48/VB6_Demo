@@ -98,6 +98,7 @@ Private Sub cmdIniciarDemo_Click()
     lblTituloInicial.Visible = False
     cmdIniciarDemo.Visible = False
     cmdFecharDemo.Visible = False
+    Inicial.Enabled = False
     Demo.Show
 End Sub
 
