@@ -22,12 +22,20 @@ Begin VB.Form Demo
    ScaleHeight     =   12510
    ScaleWidth      =   22380
    ShowInTaskbar   =   0   'False
+   Begin VB.CommandButton cmdExcluir 
+      Caption         =   "Excluir"
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   15
+      Top             =   1560
+      Width           =   1815
+   End
    Begin VB.CommandButton cmdFechar 
       Caption         =   "Fechar"
       Height          =   600
       Left            =   14760
       TabIndex        =   14
-      Top             =   1560
+      Top             =   2280
       Width           =   1815
    End
    Begin VB.Frame frameAdicionar 
@@ -378,6 +386,20 @@ Private Sub cmdAdicionarCliente_Click()
     
     MsgBox "Cliente cadastrado com sucesso"
     cmdFecharFrameAdicionar_Click
+    atualizarDataGrid
+End Sub
+
+Private Sub cmdExcluir_Click()
+    Dim sql As String
+    
+    sql = "SELECT * FROM Tabela1 WHERE cod_cadastro = " + DataGrid1.Columns(0).Text
+    If DBConnection.State = 0 Then DBConnection.Open ' se a conexão não estiver aberta, abre
+    rs.Close
+    rs.Open sql, DBConnection, adOpenStatic, adLockOptimistic
+    rs.Delete
+    rs.Update
+    rs.Close
+    MsgBox "Cliente excluido com sucesso"
     atualizarDataGrid
 End Sub
 
