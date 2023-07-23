@@ -22,6 +22,14 @@ Begin VB.Form Demo
    ScaleHeight     =   12510
    ScaleWidth      =   22380
    ShowInTaskbar   =   0   'False
+   Begin VB.CommandButton cmdAtualizar 
+      Caption         =   "Atualizar"
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   16
+      Top             =   2280
+      Width           =   1815
+   End
    Begin VB.CommandButton cmdExcluir 
       Caption         =   "Excluir"
       Height          =   600
@@ -35,7 +43,7 @@ Begin VB.Form Demo
       Height          =   600
       Left            =   14760
       TabIndex        =   14
-      Top             =   2280
+      Top             =   3000
       Width           =   1815
    End
    Begin VB.Frame frameAdicionar 
@@ -389,6 +397,11 @@ Private Sub cmdAdicionarCliente_Click()
     atualizarDataGrid
 End Sub
 
+Private Sub cmdAtualizar_Click()
+    rs.Close
+    atualizarDataGrid
+End Sub
+
 Private Sub cmdExcluir_Click()
     Dim sql As String
     
@@ -435,9 +448,9 @@ End Sub
 
 Private Sub imprime_dados()
     If DBConnection.State = 0 Then DBConnection.Open ' se a conexão não estiver aberta, abre
-    
+    rs.Close
     rs.CursorLocation = adUseClient
-    If rs.State = 0 Then rs.Open "SELECT * FROM Tabela1", DBConnection, adOpenStatic, adLockBatchOptimistic, adCmdText
+    rs.Open "SELECT * FROM Tabela1", DBConnection, adOpenStatic, adLockBatchOptimistic, adCmdText
     
     Set rs.ActiveConnection = Nothing ' Manter os dados do Rs mesmo quando a conexão é fechada
     
