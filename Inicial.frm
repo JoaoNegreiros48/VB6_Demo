@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{0C8DE9F2-EAFC-44DF-A13F-B5A9B36ED780}#2.0#0"; "lvButton.ocx"
 Begin VB.Form Inicial 
    BackColor       =   &H00FFFFFF&
    Caption         =   "Demonstração"
@@ -27,41 +28,53 @@ Begin VB.Form Inicial
       TabIndex        =   0
       Top             =   0
       Width           =   28695
-      Begin VB.CommandButton cmdFecharDemo 
-         BackColor       =   &H00E0E0E0&
-         Caption         =   "Fechar demo"
-         BeginProperty Font 
-            Name            =   "Arial"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   600
-         Left            =   4320
-         TabIndex        =   3
-         Top             =   1560
-         Width           =   1815
-      End
-      Begin VB.CommandButton cmdIniciarDemo 
-         BackColor       =   &H00E0E0E0&
-         Caption         =   "Iniciar demo"
-         BeginProperty Font 
-            Name            =   "Arial"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
+      Begin lvButton.lvButtons_H cmdIniciarDemo 
          Height          =   600
          Left            =   2400
          TabIndex        =   2
          Top             =   1560
          Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   1058
+         Caption         =   "Iniciar Demo"
+         CapAlign        =   2
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         cGradient       =   0
+         Mode            =   0
+         Value           =   0   'False
+         cBack           =   -2147483633
+      End
+      Begin lvButton.lvButtons_H cmdFecharDemo 
+         Height          =   600
+         Left            =   4440
+         TabIndex        =   3
+         Top             =   1560
+         Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   1058
+         Caption         =   "Fechar demo"
+         CapAlign        =   2
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         cGradient       =   0
+         Mode            =   0
+         Value           =   0   'False
+         cBack           =   -2147483633
       End
       Begin VB.Label lblTituloInicial 
          AutoSize        =   -1  'True

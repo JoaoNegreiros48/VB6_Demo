@@ -1,5 +1,6 @@
 VERSION 5.00
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
+Object = "{0C8DE9F2-EAFC-44DF-A13F-B5A9B36ED780}#2.0#0"; "lvButton.ocx"
 Begin VB.Form Demo 
    BorderStyle     =   0  'None
    Caption         =   "Demo"
@@ -22,30 +23,6 @@ Begin VB.Form Demo
    ScaleHeight     =   12510
    ScaleWidth      =   22380
    ShowInTaskbar   =   0   'False
-   Begin VB.CommandButton cmdAtualizar 
-      Caption         =   "Atualizar"
-      Height          =   600
-      Left            =   14760
-      TabIndex        =   16
-      Top             =   2280
-      Width           =   1815
-   End
-   Begin VB.CommandButton cmdExcluir 
-      Caption         =   "Excluir"
-      Height          =   600
-      Left            =   14760
-      TabIndex        =   15
-      Top             =   1560
-      Width           =   1815
-   End
-   Begin VB.CommandButton cmdFechar 
-      Caption         =   "Fechar"
-      Height          =   600
-      Left            =   14760
-      TabIndex        =   14
-      Top             =   3000
-      Width           =   1815
-   End
    Begin VB.Frame frameAdicionar 
       Caption         =   "Adicionar"
       BeginProperty Font 
@@ -59,44 +36,10 @@ Begin VB.Form Demo
       EndProperty
       Height          =   8535
       Left            =   1440
-      TabIndex        =   3
+      TabIndex        =   1
       Top             =   4680
       Visible         =   0   'False
       Width           =   16695
-      Begin VB.CommandButton cmdFecharFrameAdicionar 
-         Caption         =   "Fechar"
-         BeginProperty Font 
-            Name            =   "Arial"
-            Size            =   12
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   600
-         Left            =   9120
-         TabIndex        =   13
-         Top             =   4920
-         Width           =   1815
-      End
-      Begin VB.CommandButton cmdAdicionarCliente 
-         Caption         =   "Adicionar"
-         BeginProperty Font 
-            Name            =   "Arial"
-            Size            =   12
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   600
-         Left            =   6960
-         TabIndex        =   12
-         Top             =   4920
-         Width           =   1815
-      End
       Begin VB.TextBox txtTelefone 
          BeginProperty Font 
             Name            =   "Arial"
@@ -109,7 +52,7 @@ Begin VB.Form Demo
          EndProperty
          Height          =   405
          Left            =   10440
-         TabIndex        =   11
+         TabIndex        =   9
          Top             =   3720
          Width           =   3015
       End
@@ -125,7 +68,7 @@ Begin VB.Form Demo
          EndProperty
          Height          =   405
          Left            =   10440
-         TabIndex        =   10
+         TabIndex        =   8
          Top             =   2040
          Width           =   3015
       End
@@ -141,7 +84,7 @@ Begin VB.Form Demo
          EndProperty
          Height          =   405
          Left            =   4680
-         TabIndex        =   9
+         TabIndex        =   7
          Top             =   3720
          Width           =   3015
       End
@@ -157,9 +100,57 @@ Begin VB.Form Demo
          EndProperty
          Height          =   405
          Left            =   4680
-         TabIndex        =   8
+         TabIndex        =   6
          Top             =   2040
          Width           =   3015
+      End
+      Begin lvButton.lvButtons_H cmdFecharFrameAdicionar 
+         Height          =   600
+         Left            =   9120
+         TabIndex        =   15
+         Top             =   4920
+         Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   1058
+         Caption         =   "Fechar Adicionar"
+         CapAlign        =   2
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         cGradient       =   0
+         Mode            =   0
+         Value           =   0   'False
+         cBack           =   -2147483633
+      End
+      Begin lvButton.lvButtons_H cmdAdicionarCliente 
+         Height          =   600
+         Left            =   6960
+         TabIndex        =   16
+         Top             =   4920
+         Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   1058
+         Caption         =   "Adicionar"
+         CapAlign        =   2
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         cGradient       =   0
+         Mode            =   0
+         Value           =   0   'False
+         cBack           =   -2147483633
       End
       Begin VB.Label lblIdade 
          AutoSize        =   -1  'True
@@ -176,7 +167,7 @@ Begin VB.Form Demo
          EndProperty
          Height          =   270
          Left            =   4680
-         TabIndex        =   7
+         TabIndex        =   5
          Top             =   3360
          Width           =   1650
       End
@@ -195,7 +186,7 @@ Begin VB.Form Demo
          EndProperty
          Height          =   270
          Left            =   10440
-         TabIndex        =   6
+         TabIndex        =   4
          Top             =   3360
          Width           =   1650
       End
@@ -214,7 +205,7 @@ Begin VB.Form Demo
          EndProperty
          Height          =   270
          Left            =   10440
-         TabIndex        =   5
+         TabIndex        =   3
          Top             =   1680
          Width           =   1650
       End
@@ -233,26 +224,10 @@ Begin VB.Form Demo
          EndProperty
          Height          =   270
          Left            =   4680
-         TabIndex        =   4
+         TabIndex        =   2
          Top             =   1680
          Width           =   1650
       End
-   End
-   Begin VB.CommandButton cmdAdicionar 
-      Caption         =   "Adicionar"
-      Height          =   600
-      Left            =   14760
-      TabIndex        =   2
-      Top             =   840
-      Width           =   1815
-   End
-   Begin VB.CommandButton cmdImprimir 
-      Caption         =   "Imprimir"
-      Height          =   600
-      Left            =   14760
-      TabIndex        =   1
-      Top             =   120
-      Width           =   1815
    End
    Begin MSDataGridLib.DataGrid DataGrid1 
       Height          =   8535
@@ -371,6 +346,126 @@ Begin VB.Form Demo
          EndProperty
       EndProperty
    End
+   Begin lvButton.lvButtons_H cmdImprimir 
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   10
+      Top             =   120
+      Width           =   1815
+      _ExtentX        =   3201
+      _ExtentY        =   1058
+      Caption         =   "Imprimir"
+      CapAlign        =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      cGradient       =   0
+      Mode            =   0
+      Value           =   0   'False
+      cBack           =   -2147483633
+   End
+   Begin lvButton.lvButtons_H cmdAdicionar 
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   11
+      Top             =   840
+      Width           =   1815
+      _ExtentX        =   3201
+      _ExtentY        =   1058
+      Caption         =   "Adicionar"
+      CapAlign        =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      cGradient       =   0
+      Mode            =   0
+      Value           =   0   'False
+      cBack           =   -2147483633
+   End
+   Begin lvButton.lvButtons_H LvBEditar 
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   12
+      Top             =   1560
+      Width           =   1815
+      _ExtentX        =   3201
+      _ExtentY        =   1058
+      Caption         =   "Editar"
+      CapAlign        =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      cGradient       =   0
+      Mode            =   0
+      Value           =   0   'False
+      cBack           =   -2147483633
+   End
+   Begin lvButton.lvButtons_H cmdExcluir 
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   13
+      Top             =   2280
+      Width           =   1815
+      _ExtentX        =   3201
+      _ExtentY        =   1058
+      Caption         =   "Excluir"
+      CapAlign        =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      cGradient       =   0
+      Mode            =   0
+      Value           =   0   'False
+      cBack           =   -2147483633
+   End
+   Begin lvButton.lvButtons_H cmdFechar 
+      Height          =   600
+      Left            =   14760
+      TabIndex        =   14
+      Top             =   3000
+      Width           =   1815
+      _ExtentX        =   3201
+      _ExtentY        =   1058
+      Caption         =   "Fechar"
+      CapAlign        =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      cGradient       =   0
+      Mode            =   0
+      Value           =   0   'False
+      cBack           =   -2147483633
+   End
 End
 Attribute VB_Name = "Demo"
 Attribute VB_GlobalNameSpace = False
@@ -394,11 +489,6 @@ Private Sub cmdAdicionarCliente_Click()
     
     MsgBox "Cliente cadastrado com sucesso"
     cmdFecharFrameAdicionar_Click
-    atualizarDataGrid
-End Sub
-
-Private Sub cmdAtualizar_Click()
-    rs.Close
     atualizarDataGrid
 End Sub
 
