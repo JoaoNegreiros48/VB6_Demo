@@ -112,7 +112,7 @@ Begin VB.Form Demo
          Width           =   1815
          _ExtentX        =   3201
          _ExtentY        =   1058
-         Caption         =   "Fechar Adicionar"
+         Caption         =   "Fechar"
          CapAlign        =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Arial"
@@ -126,6 +126,8 @@ Begin VB.Form Demo
          cGradient       =   0
          Mode            =   0
          Value           =   0   'False
+         Image           =   "Demo.frx":0000
+         ImgSize         =   32
          cBack           =   -2147483633
       End
       Begin lvButton.lvButtons_H cmdAdicionarCliente 
@@ -150,6 +152,8 @@ Begin VB.Form Demo
          cGradient       =   0
          Mode            =   0
          Value           =   0   'False
+         Image           =   "Demo.frx":10DA
+         ImgSize         =   32
          cBack           =   -2147483633
       End
       Begin VB.Label lblIdade 
@@ -368,6 +372,8 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
+      Image           =   "Demo.frx":21B4
+      ImgSize         =   32
       cBack           =   -2147483633
    End
    Begin lvButton.lvButtons_H cmdAdicionar 
@@ -392,6 +398,8 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
+      Image           =   "Demo.frx":328E
+      ImgSize         =   32
       cBack           =   -2147483633
    End
    Begin lvButton.lvButtons_H LvBEditar 
@@ -416,6 +424,8 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
+      Image           =   "Demo.frx":4368
+      ImgSize         =   32
       cBack           =   -2147483633
    End
    Begin lvButton.lvButtons_H cmdExcluir 
@@ -440,6 +450,8 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
+      Image           =   "Demo.frx":5442
+      ImgSize         =   32
       cBack           =   -2147483633
    End
    Begin lvButton.lvButtons_H cmdFechar 
@@ -464,6 +476,8 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
+      Image           =   "Demo.frx":651C
+      ImgSize         =   32
       cBack           =   -2147483633
    End
 End

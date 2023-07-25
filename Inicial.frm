@@ -50,6 +50,8 @@ Begin VB.Form Inicial
          cGradient       =   0
          Mode            =   0
          Value           =   0   'False
+         Image           =   "Inicial.frx":0000
+         ImgSize         =   32
          cBack           =   -2147483633
       End
       Begin lvButton.lvButtons_H cmdFecharDemo 
@@ -74,6 +76,8 @@ Begin VB.Form Inicial
          cGradient       =   0
          Mode            =   0
          Value           =   0   'False
+         Image           =   "Inicial.frx":10DA
+         ImgSize         =   32
          cBack           =   -2147483633
       End
       Begin VB.Label lblTituloInicial 
