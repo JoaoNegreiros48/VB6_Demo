@@ -26,7 +26,7 @@ O código fornecido demonstra as funcionalidades do CRUD, essas funcionalidades 
 
 ## Tutorial de uso
 
-1.  Baixe os arquivos do projeto: `demo_vb6.exe` e `Db.mdb` (<a href="https://drive.google.com/drive/folders/1rOIdMXF_bLa9QlQNq5i08u_87dtr5ZW7?usp=sharing">Clique aqui para baixar</a>).
+1.  Baixe os arquivos do projeto: `demo_vb6.exe` e `Db.mdb` (<a target="_blank" href="https://drive.google.com/drive/folders/1rOIdMXF_bLa9QlQNq5i08u_87dtr5ZW7?usp=sharing">Clique aqui para baixar</a>).
 2.  Crie uma pasta chamada `VB6_Demo` na unidade `C:` do computador.
 3.  Coloque os arquivos baixados (`demo_vb6.exe` e `Db.mdb`) dentro da pasta `VB6_Demo`.
 4.  Execute o arquivo `demo_vb6.exe` para iniciar a aplicação.
