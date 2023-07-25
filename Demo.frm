@@ -628,7 +628,9 @@ Private Sub imprime_dados()
     Printer.EndDoc 'envia os dados para a impressora
 
     MsgBox "Os dados foram enviados para a impressora ... ! "
-
+    
+    rs.Close
+    atualizarDataGrid
 End Sub
 
 Function atualizarDataGrid()
