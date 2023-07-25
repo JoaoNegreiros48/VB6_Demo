@@ -35,9 +35,9 @@ Begin VB.Form Demo
          Strikethrough   =   0   'False
       EndProperty
       Height          =   8535
-      Left            =   1440
+      Left            =   480
       TabIndex        =   1
-      Top             =   4680
+      Top             =   1320
       Visible         =   0   'False
       Width           =   16695
       Begin VB.TextBox txtTelefone 
@@ -153,6 +153,33 @@ Begin VB.Form Demo
          Mode            =   0
          Value           =   0   'False
          Image           =   "Demo.frx":10DA
+         ImgSize         =   32
+         cBack           =   -2147483633
+      End
+      Begin lvButton.lvButtons_H LvBEditarCliente 
+         Height          =   600
+         Left            =   6960
+         TabIndex        =   17
+         Top             =   5640
+         Visible         =   0   'False
+         Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   1058
+         Caption         =   "Editar"
+         CapAlign        =   2
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         cGradient       =   0
+         Mode            =   0
+         Value           =   0   'False
+         Image           =   "Demo.frx":21B4
          ImgSize         =   32
          cBack           =   -2147483633
       End
@@ -372,7 +399,7 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
-      Image           =   "Demo.frx":21B4
+      Image           =   "Demo.frx":328E
       ImgSize         =   32
       cBack           =   -2147483633
    End
@@ -398,7 +425,7 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
-      Image           =   "Demo.frx":328E
+      Image           =   "Demo.frx":4368
       ImgSize         =   32
       cBack           =   -2147483633
    End
@@ -424,7 +451,7 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
-      Image           =   "Demo.frx":4368
+      Image           =   "Demo.frx":5442
       ImgSize         =   32
       cBack           =   -2147483633
    End
@@ -450,7 +477,7 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
-      Image           =   "Demo.frx":5442
+      Image           =   "Demo.frx":651C
       ImgSize         =   32
       cBack           =   -2147483633
    End
@@ -476,7 +503,7 @@ Begin VB.Form Demo
       cGradient       =   0
       Mode            =   0
       Value           =   0   'False
-      Image           =   "Demo.frx":651C
+      Image           =   "Demo.frx":75F6
       ImgSize         =   32
       cBack           =   -2147483633
    End
@@ -488,6 +515,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Dim rs As New ADODB.Recordset
 Dim rs_cadastrar As New ADODB.Recordset
+Dim id_ativo As Integer
 
 Private Sub cmdAdicionarCliente_Click()
     If DBConnection.State = 0 Then DBConnection.Open ' se a conexão não estiver aberta, abre
@@ -614,3 +642,45 @@ Function atualizarDataGrid()
     
     DBConnection.Close
 End Function
+
+Private Sub LvBEditar_Click()
+    Dim sql As String
+    frameAdicionar.Visible = True
+    frameAdicionar.Left = 0
+    frameAdicionar.Top = 0
+    frameAdicionar.Caption = "Editar"
+    LvBEditarCliente.Visible = True
+    LvBEditarCliente.Top = 4920
+    cmdAdicionarCliente.Visible = False
+    
+    id_ativo = DataGrid1.Columns(0).Text
+    
+    sql = "SELECT * FROM Tabela1 WHERE cod_cadastro = " + DataGrid1.Columns(0).Text
+    If DBConnection.State = 0 Then DBConnection.Open ' se a conexão não estiver aberta, abre
+    rs.Close
+    rs.Open sql, DBConnection, adOpenStatic, adLockOptimistic
+    
+    txtNome.Text = rs!nome
+    txtEmail.Text = rs!email
+    txtIdade.Text = rs!idade
+    txtTelefone.Text = rs!telefone
+    rs.Close
+End Sub
+
+Private Sub LvBEditarCliente_Click()
+    Set rs = New ADODB.Recordset
+    'rs.CursorLocation = adUseClient
+    Dim sql As String
+    sql = "SELECT * FROM Tabela1 WHERE cod_cadastro = " & id_ativo
+    rs.Open sql, DBConnection, adOpenStatic, adLockOptimistic
+    rs.Fields("Nome") = txtNome
+    rs.Fields("Email") = txtEmail
+    rs.Fields("Telefone") = txtTelefone
+    rs.Fields("Idade") = txtIdade
+    rs.Update
+    rs.Close
+    
+    MsgBox "Cliente editado com sucesso"
+    cmdFecharFrameAdicionar_Click
+    atualizarDataGrid
+End Sub
